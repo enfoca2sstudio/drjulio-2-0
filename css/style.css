@@ -1,0 +1,835 @@
+/*!
+ * Copyright 2025-2026 Dr. Julio Estrada
+ * Copyright 2025-2026 Enfoca2's Studios
+ */
+/*=========== TABLE OF CONTENTS ===========
+1.  CSS General
+2.  Header
+A.  Home
+  3.  Home hero
+  4.  Info hero
+  5.  Intervenciones
+  6.  Valores home
+  7.  Proceso de atención
+  8.  Agendar
+B.  Cursos
+  xx. Cursos Hero
+  xx. Contenido cursos
+C.  Certificaciones
+  xx. Certificaciones Hero
+  xx. Contenido certificaciones
+D.  Ebooks
+  xx. Ebooks Hero
+  xx. Ebooks Contenido
+E.  Nosotros
+  xx. Contenido Nosotros
+F.  Contacto
+  xx. Contenido contacto
+Footer
+===========================================*/
+
+:root {
+  --azul-mari: #0d3a5c;
+  --azul-mari-cla: #3c80c2;
+  --azul-med: #1776ba;
+  --aqua-cla: #bbe4ff;
+  --fucsia: #e52780;
+  --blanco: #fff;
+  --negro: #000;
+  --titulo: 40px;
+  --subtitulo: 30px;
+  --parrafo: 16px;
+
+  --primary-color: #0d5c75;
+  --secondary-color: #1995ad;
+  --accent-color: #a4b3b6;
+  --light-bg: #f4f7f6;
+  --text-dark: #2c3e50;
+}
+
+/* creato display */
+@font-face {
+  font-family: "Creato Display";
+  src:
+    url("../fonts/creato_display/CreatoDisplay-Thin.woff2") format("woff2"),
+    url("../fonts/creato_display/CreatoDisplay-Thin.woff") format("woff");
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Creato Display";
+  src:
+    url("../fonts/creato_display/CreatoDisplay-ThinItalic.woff2")
+      format("woff2"),
+    url("../fonts/creato_display/CreatoDisplay-ThinItalic.woff") format("woff");
+  font-weight: 100;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Creato Display";
+  src:
+    url("../fonts/creato_display/CreatoDisplay-Light.woff2") format("woff2"),
+    url("../fonts/creato_display/CreatoDisplay-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Creato Display";
+  src:
+    url("../fonts/creato_display/CreatoDisplay-LightItalic.woff2")
+      format("woff2"),
+    url("../fonts/creato_display/CreatoDisplay-LightItalic.woff") format("woff");
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Creato Display";
+  src:
+    url("../fonts/creato_display/CreatoDisplay-Regular.woff2") format("woff2"),
+    url("../fonts/creato_display/CreatoDisplay-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Creato Display";
+  src:
+    url("../fonts/creato_display/CreatoDisplay-Italic.woff2") format("woff2"),
+    url("../fonts/creato_display/CreatoDisplay-Italic.woff") format("woff");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Creato Display";
+  src:
+    url("../fonts/creato_display/CreatoDisplay-Medium.woff2") format("woff2"),
+    url("../fonts/creato_display/CreatoDisplay-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Creato Display";
+  src:
+    url("../fonts/creato_display/CreatoDisplay-MediumItalic.woff2")
+      format("woff2"),
+    url("../fonts/creato_display/CreatoDisplay-MediumItalic.woff")
+      format("woff");
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Creato Display";
+  src:
+    url("../fonts/creato_display/CreatoDisplay-Bold.woff2") format("woff2"),
+    url("../fonts/creato_display/CreatoDisplay-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Creato Display";
+  src:
+    url("../fonts/creato_display/CreatoDisplay-BoldItalic.woff2")
+      format("woff2"),
+    url("../fonts/creato_display/CreatoDisplay-BoldItalic.woff") format("woff");
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Creato Display";
+  src:
+    url("../fonts/creato_display/CreatoDisplay-ExtraBold.woff2") format("woff2"),
+    url("../fonts/creato_display/CreatoDisplay-ExtraBold.woff") format("woff");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Creato Display";
+  src:
+    url("../fonts/creato_display/CreatoDisplay-ExtraBoldItalic.woff2")
+      format("woff2"),
+    url("../fonts/creato_display/CreatoDisplay-ExtraBoldItalic.woff")
+      format("woff");
+  font-weight: 800;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Creato Display";
+  src:
+    url("../fonts/creato_display/CreatoDisplay-Black.woff2") format("woff2"),
+    url("../fonts/creato_display/CreatoDisplay-Black.woff") format("woff");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Creato Display";
+  src:
+    url("../fonts/creato_display/CreatoDisplay-BlackItalic.woff2")
+      format("woff2"),
+    url("../fonts/creato_display/CreatoDisplay-BlackItalic.woff") format("woff");
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+body {
+  color: var(--text-dark);
+  background-color: #ffffff;
+  overflow-x: hidden;
+}
+
+.acent-aqua {
+  color: var(--aqua-cla);
+}
+.font-creato {
+  font-family: "Creato Display" !important;
+}
+.txt-acent-ng {
+  font-weight: 700 !important;
+}
+
+/*=====================================
+  2.  Header
+=======================================*/
+.navbar {
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  background-color: #ffffff !important;
+  padding: 15px 0;
+}
+.navbar-brand {
+  width: 226px;
+  height: auto;
+}
+.navbar-brand img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  margin: auto;
+}
+
+.navbar-nav {
+  display: flex;
+  flex-wrap: wrap;
+  width: 83%;
+}
+
+.dropdown-menu {
+  width: 267px;
+  height: 393px;
+  border: 1px solid var(--fucsia) !important;
+  overflow-y: scroll;
+}
+
+.dropdown-menu::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+.dropdown-menu::-webkit-scrollbar-track {
+  background: var(--blanco); /* Color de fondo del track del scrollbar */
+}
+
+.dropdown-menu::-webkit-scrollbar-thumb {
+  background: rgba(229, 39, 128, 0.4); /* Color del thumb del scrollbar */
+  border-radius: 10px;
+  transition: all 0.3s ease-in-out;
+}
+
+.dropdown-menu::-webkit-scrollbar-thumb:hover {
+  background: var(--fucsia);
+}
+
+.dropdown-item {
+  border-bottom: 1px solid var(--fucsia);
+  white-space: wrap !important;
+}
+
+.nav-link {
+  color: var(--azul-mari) !important;
+  font-weight: 500;
+  margin: 0 10px;
+  transition: color 0.3s ease;
+}
+.nav-link:hover,
+.nav-link.active {
+  color: var(--fucsia) !important;
+}
+.btn-nav {
+  background-color: var(--azul-mari);
+  color: var(--blanco) !important;
+  border: 2px solid var(--azul-mari);
+  border-radius: 5px;
+  padding: 8px 13px !important;
+  transition: all 0.3s ease;
+}
+.btn-nav:hover {
+  color: var(--azul-mari) !important;
+  border: 2px solid var(--azul-mari);
+  background-color: transparent;
+}
+
+/*=====================================
+  A.  Home
+=======================================*/
+/*-------------------------------------
+    3.  Home hero
+--------------------------------------*/
+.hero {
+  background: url("http://drjulioestrada.com/wp-content/uploads/2026/05/hero-bg.webp")
+    no-repeat center center/cover;
+  padding: 120px 0;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+}
+.titu-hero {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 38px;
+  color: var(--blanco) !important;
+}
+.txt-hero {
+  font-size: var(--parrafo);
+  font-weight: 400;
+  line-height: 18px;
+  color: var(--blanco) !important;
+}
+
+.row-btns-hero {
+  width: 369px;
+}
+
+.btn-hero {
+  display: block;
+  margin: auto;
+  padding: 12px 24px;
+  font-size: 18px;
+  line-height: 21px;
+}
+.btn-hero-1,
+.btn-hero-1:hover {
+  font-weight: 600;
+  color: var(--blanco);
+  border-radius: 30px;
+  border: none;
+  background-color: var(--azul-mari);
+}
+.btn-hero-2,
+.btn-hero-2:hover {
+  font-weight: 600;
+  color: var(--azul-mari);
+  border-radius: 30px;
+  border: none;
+  background-color: var(--blanco);
+}
+
+.img-hero-home {
+  display: block;
+  margin: auto;
+  margin-top: 38px;
+  width: 67%;
+  height: auto;
+}
+
+/*-------------------------------------
+    4.  Info hero
+--------------------------------------*/
+.info-hero {
+  position: relative;
+  top: -160px;
+  padding: 0 148px !important;
+}
+
+.col-info-hero1 {
+  -ms-flex: 0 0 36%;
+  flex: 0 0 36%;
+  max-width: 100%;
+  padding: 0 !important;
+  background-color: var(--azul-mari-cla);
+}
+.col-info-hero2 {
+  -ms-flex: 0 0 60%;
+  flex: 0 0 60%;
+  max-width: 100%;
+  background-color: #5ea2e4;
+}
+.col-info-hero {
+  margin: 0 10px !important;
+  border-radius: 10px;
+  box-shadow: 5px 3px 4px -1px rgba(0, 0, 0, 0.38);
+  -webkit-box-shadow: 5px 3px 4px -1px rgba(0, 0, 0, 0.38);
+  -moz-box-shadow: 5px 3px 4px -1px rgba(0, 0, 0, 0.38);
+}
+
+.contain-experien {
+  height: 251px;
+  padding: 20px 20px;
+}
+
+.contain-experien1 {
+  background: url("http://drjulioestrada.com/wp-content/uploads/2026/02/asset-06.png")
+    no-repeat center center/cover;
+}
+.contain-experien2 {
+  display: flex;
+  padding: 0 !important;
+  background: url("http://drjulioestrada.com/wp-content/uploads/2026/02/asset-05.png")
+    no-repeat center -91px / cover;
+  background-size: 663px;
+}
+
+.tiempo-experien {
+  margin-bottom: 13px !important;
+  font-size: 58px;
+  font-weight: 700;
+  color: var(--blanco);
+  text-align: left;
+}
+
+.titu-experien,
+.txt-experien {
+  margin-bottom: 0 !important;
+  text-align: right;
+  color: var(--blanco);
+}
+.titu-experien {
+  font-size: 25px;
+  margin-bottom: 9px !important;
+  font-weight: 500;
+}
+.txt-experien {
+  padding-left: 83px;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 18px;
+}
+
+.col-info-procedi1 {
+  -ms-flex: 0 0 60%;
+  flex: 0 0 60%;
+  max-width: 100%;
+}
+.col-info-procedi2 {
+  -ms-flex: 0 0 30%;
+  flex: 0 0 30%;
+  max-width: 100%;
+}
+
+.txt-info-procedi {
+  margin-bottom: 0 !important;
+  color: var(--azul-mari);
+}
+
+.cont-info-procedi1 {
+  margin-bottom: 88px;
+}
+.txt-info-procedi1 {
+  font-size: 21px;
+  font-weight: 500;
+}
+.txt-info-procedi span {
+  font-size: 22px;
+  font-weight: 600;
+}
+.txt-info-procedi2,
+.txt-info-procedi3 {
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 18px;
+}
+
+/*-------------------------------------
+    5.  Intervenciones
+--------------------------------------*/
+#sobre-mi {
+  margin-top: -72px;
+  padding: 0 !important;
+}
+#sobre-mi .container {
+  padding: 0 !important;
+}
+.col-info-profe {
+  padding: 10px;
+}
+.col-info-profe1 {
+  -ms-flex: 0 0 60%;
+  flex: 0 0 60%;
+  max-width: 100%;
+  padding: 27px 31px;
+  border-right: 5px solid var(--azul-mari);
+}
+.col-info-profe2 {
+  -ms-flex: 0 0 38%;
+  flex: 0 0 38%;
+  max-width: 100%;
+  padding: 0 22px;
+  font-size: var(--parrafo);
+  color: var(--azul-mari);
+}
+
+.titu-info-profe {
+  margin-bottom: 0 !important;
+  font-size: var(--titulo);
+  color: var(--azul-mari);
+  text-align: right;
+  line-height: 42px;
+}
+
+.list-info-profe {
+  font-size: var(--parrafo);
+  color: var(--azul-mari);
+  line-height: 17px;
+}
+
+.btn-info-profe,
+.btn-info-profe:hover {
+  display: block;
+  width: 146px;
+  margin: auto;
+  font-size: var(--parrafo);
+  font-weight: 600;
+  color: var(--blanco);
+  border-radius: 30px;
+  border: none;
+  background-color: var(--azul-mari);
+}
+
+.procedi-carousel {
+  margin-top: 57px;
+}
+
+.procedi-carousel .item {
+  background: white;
+}
+
+.img-proce-home {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: auto;
+}
+
+.procedi-carousel .owl-dots .owl-dot span {
+  background-color: var(--azul-mari-cla);
+}
+.procedi-carousel .owl-dots .owl-dot span.active {
+  background-color: var(--azul-mari);
+}
+
+/*-------------------------------------
+    6.  Valores home
+--------------------------------------*/
+#valores .container {
+  padding: 0 !important;
+}
+
+.col-valor-home1 {
+  -ms-flex: 0 0 55%;
+  flex: 0 0 55%;
+  max-width: 100%;
+}
+.col-valor-home2 {
+  -ms-flex: 0 0 45%;
+  flex: 0 0 45%;
+  max-width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.row-cont-valor {
+  display: flex;
+  justify-content: center;
+}
+.col-cont-valor {
+  -ms-flex: 0 0 45%;
+  flex: 0 0 45%;
+  max-width: 100%;
+  margin: 0 10px;
+  padding: 0 !important;
+}
+
+.cont-valor1,
+.cont-valor4 {
+  height: 432px;
+  border-radius: 31px;
+}
+.cont-valor1 {
+  background: url("http://drjulioestrada.com/wp-content/uploads/2026/02/img-1.webp")
+    no-repeat center center/cover;
+}
+
+.cont-valor2 {
+  padding: 0 12px;
+}
+.cuadro-valor {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  margin-top: 15px;
+  padding: 33px 0;
+  border-radius: 19px;
+  background: var(--azul-mari-cla);
+}
+.list-horaro {
+  margin-top: 19px;
+  margin-bottom: 0 !important;
+}
+.img-horario {
+  width: 12%;
+  height: auto;
+}
+.txt-horario {
+  margin-bottom: 0 !important;
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--blanco);
+}
+
+.item-horario {
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--blanco);
+}
+
+.cont-valor3 {
+  height: 134px;
+}
+.cont-valor4 {
+  background: url("http://drjulioestrada.com/wp-content/uploads/2026/02/img-home-2.jpg")
+    no-repeat center center/cover;
+}
+
+.titu-valor-home {
+  margin-bottom: 10px !important;
+  font-size: 17px;
+  font-weight: 500;
+  color: var(--azul-mari-cla);
+  letter-spacing: 1px;
+}
+
+.titus-valor-home {
+  margin-bottom: 0 !important;
+  font-size: 37px;
+  font-weight: 700;
+  color: var(--azul-mari);
+}
+
+.list-valores {
+  list-style: none;
+}
+
+.item-valores {
+  margin-bottom: 19px;
+  font-size: 15px;
+  font-weight: 400;
+  color: var(--azul-mari);
+  line-height: 17px;
+}
+
+/*-------------------------------------
+    7.  Proceso de atención
+--------------------------------------*/
+.row-proceso-atencion {
+  display: flex;
+  align-items: center;
+}
+.col-proceso-atencion {
+  -ms-flex: 0 0 45%;
+  flex: 0 0 45%;
+  max-width: 100%;
+  padding-left: 159px;
+  border: 1px solid red;
+}
+
+.titu-atencion {
+  margin-bottom: 10px !important;
+  font-size: 17px;
+  font-weight: 700;
+  text-align: right;
+  color: var(--fucsia);
+  letter-spacing: 1px;
+}
+
+.titus-atencion {
+  margin-bottom: 28px !important;
+  font-size: 37px;
+  font-weight: 700;
+  text-align: right;
+  color: var(--azul-mari);
+}
+
+.txt-atencion {
+  margin-bottom: 0 !important;
+  font-size: var(--parrafo);
+  font-weight: 400;
+  text-align: right;
+  line-height: 18px;
+  color: var(--azul-mari);
+}
+
+/* Section Global Styling */
+section {
+  padding: 80px 0;
+}
+.section-title {
+  text-align: center;
+  margin-bottom: 50px;
+  position: relative;
+  padding-bottom: 15px;
+  color: var(--primary-color);
+  font-weight: 700;
+}
+.section-title::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background-color: var(--secondary-color);
+}
+
+/* About Section */
+.about-img {
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+.feature-box {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.feature-icon {
+  background-color: rgba(25, 149, 173, 0.1);
+  color: var(--secondary-color);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  margin-right: 15px;
+  flex-shrink: 0;
+}
+
+/* Services Cards */
+.bg-light-section {
+  background-color: var(--light-bg);
+}
+.service-card {
+  background: white;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.03);
+  border: none;
+  height: 100%;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+.service-card i {
+  color: var(--secondary-color);
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+.service-card h4 {
+  color: var(--primary-color);
+  font-weight: 600;
+  font-size: 1.3rem;
+}
+
+/* Owl Carousel Customization */
+
+.testimonial-img {
+  width: 80px !important;
+  height: 80px;
+  border-radius: 50%;
+  margin: 0 auto 20px;
+  object-fit: cover;
+  border: 3px solid var(--secondary-color);
+}
+.owl-theme .owl-dots .owl-dot.active span,
+.owl-theme .owl-dots .owl-dot:hover span {
+  background: var(--primary-color) !important;
+}
+
+/* Contact & Form */
+.contact-info-box {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 40px;
+  border-radius: 15px;
+  height: 100%;
+}
+.contact-info-item {
+  display: flex;
+  margin-bottom: 25px;
+}
+.contact-info-item i {
+  font-size: 1.4rem;
+  margin-right: 15px;
+  color: var(--secondary-color);
+}
+.form-control {
+  padding: 12px 15px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+.form-control:focus {
+  box-shadow: 0 0 0 0.25rem rgba(25, 149, 173, 0.25);
+  border-color: var(--secondary-color);
+}
+
+/* Footer */
+footer {
+  background-color: #1a252f;
+  color: #bdc3c7;
+  padding: 40px 0 20px;
+  font-size: 0.95rem;
+}
+footer h5 {
+  color: white;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+footer a {
+  color: #bdc3c7;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+footer a:hover {
+  color: white;
+}
+.footer-socials a {
+  font-size: 1.2rem;
+  margin-right: 15px;
+  background: rgba(255, 255, 255, 0.05);
+  width: 40px;
+  height: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+.footer-socials a:hover {
+  background: var(--secondary-color);
+}
