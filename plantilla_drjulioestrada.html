@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. Julio Estrada - Cirugía General y Laparoscópica</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <!-- Owl Carousel CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    
+    <style>
+        :root {
+            --primary-color: #0d5c75;
+            --secondary-color: #1995ad;
+            --accent-color: #a4b3b6;
+            --light-bg: #f4f7f6;
+            --text-dark: #2c3e50;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: var(--text-dark);
+            background-color: #ffffff;
+            overflow-x: hidden;
+        }
+
+        /* Top Bar */
+        .top-bar {
+            background-color: var(--primary-color);
+            color: white;
+            font-size: 0.9rem;
+            padding: 6px 0;
+        }
+        .top-bar a {
+            color: white;
+            text-decoration: none;
+        }
+
+        /* Navbar Customization */
+        .navbar {
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            background-color: #ffffff !important;
+            padding: 15px 0;
+        }
+        .navbar-brand {
+            font-weight: 700;
+            color: var(--primary-color) !important;
+            font-size: 1.5rem;
+        }
+        .navbar-brand span {
+            color: var(--secondary-color);
+            font-weight: 300;
+            font-size: 0.95rem;
+            display: block;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .nav-link {
+            color: var(--text-dark) !important;
+            font-weight: 500;
+            margin: 0 10px;
+            transition: color 0.3s ease;
+        }
+        .nav-link:hover, .nav-link.active {
+            color: var(--secondary-color) !important;
+        }
+        .btn-nav {
+            background-color: var(--secondary-color);
+            color: white !important;
+            border-radius: 25px;
+            padding: 8px 20px !important;
+        }
+        .btn-nav:hover {
+            background-color: var(--primary-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, rgba(255,255,255,0.9) 30%, rgba(255,255,255,0.6) 100%), url('https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&q=80&w=2000') no-repeat center center/cover;
+            padding: 120px 0;
+            min-height: 80vh;
+            display: flex;
+            align-items: center;
+        }
+        .hero h1 {
+            color: var(--primary-color);
+            font-weight: 700;
+            font-size: 3rem;
+        }
+        .hero p {
+            font-size: 1.2rem;
+            color: #555;
+        }
+        .btn-primary-custom {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 30px;
+            font-weight: 600;
+            border: none;
+            transition: background 0.3s;
+        }
+        .btn-primary-custom:hover {
+            background-color: var(--secondary-color);
+            color: white;
+        }
+
+        /* Section Global Styling */
+        section {
+            padding: 80px 0;
+        }
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+            position: relative;
+            padding-bottom: 15px;
+            color: var(--primary-color);
+            font-weight: 700;
+        }
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background-color: var(--secondary-color);
+        }
+
+        /* About Section */
+        .about-img {
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        .feature-box {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .feature-icon {
+            background-color: rgba(25, 149, 173, 0.1);
+            color: var(--secondary-color);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            margin-right: 15px;
+            flex-shrink: 0;
+        }
+
+        /* Services Cards */
+        .bg-light-section {
+            background-color: var(--light-bg);
+        }
+        .service-card {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.03);
+            border: none;
+            height: 100%;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+        }
+        .service-card i {
+            color: var(--secondary-color);
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        .service-card h4 {
+            color: var(--primary-color);
+            font-weight: 600;
+            font-size: 1.3rem;
+        }
+
+        /* Owl Carousel Customization */
+        .owl-carousel .item {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+            margin: 15px;
+            text-align: center;
+        }
+        .testimonial-img {
+            width: 80px !important;
+            height: 80px;
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            object-fit: cover;
+            border: 3px solid var(--secondary-color);
+        }
+        .owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
+            background: var(--primary-color) !important;
+        }
+
+        /* Contact & Form */
+        .contact-info-box {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 40px;
+            border-radius: 15px;
+            height: 100%;
+        }
+        .contact-info-item {
+            display: flex;
+            margin-bottom: 25px;
+        }
+        .contact-info-item i {
+            font-size: 1.4rem;
+            margin-right: 15px;
+            color: var(--secondary-color);
+        }
+        .form-control {
+            padding: 12px 15px;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+        }
+        .form-control:focus {
+            box-shadow: 0 0 0 0.25rem rgba(25, 149, 173, 0.25);
+            border-color: var(--secondary-color);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #1a252f;
+            color: #bdc3c7;
+            padding: 40px 0 20px;
+            font-size: 0.95rem;
+        }
+        footer h5 {
+            color: white;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+        footer a {
+            color: #bdc3c7;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        footer a:hover {
+            color: white;
+        }
+        .footer-socials a {
+            font-size: 1.2rem;
+            margin-right: 15px;
+            background: rgba(255,255,255,0.05);
+            width: 40px;
+            height: 40px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+        }
+        .footer-socials a:hover {
+            background: var(--secondary-color);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- TOP BAR -->
+    <div class="top-bar d-none d-md-block">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <i class="fas fa-envelope me-2"></i> <a href="mailto:info@drjulioestrada.com">info@drjulioestrada.com</a>
+                </div>
+                <div class="col-md-6 text-end">
+                    <i class="fas fa-phone me-2"></i> Teléfono: +123 456 7890
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg sticky-top navbar-light">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                DR. JULIO ESTRADA
+                <span>Cirugía General y Laparoscópica</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-lg-center">
+                    <li class="nav-item"><a class="nav-link active" href="#inicio">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#sobre-mi">Sobre Mí</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#servicios">Servicios</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#testimonios">Testimonios</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+                    <li class="nav-item ms-lg-2"><a class="nav-link btn-nav" href="#contacto">Agendar Cita</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section id="inicio" class="hero">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <h1 class="mb-3">Cirugía Segura, Avanzada y de Mínima Invasión</h1>
+                    <p class="mb-4">Especialista en procedimientos laparoscópicos avanzados y cirugía general. Brindando una atención médica humana con tecnología de vanguardia para una pronta recuperación.</p>
+                    <a href="#contacto" class="btn btn-primary-custom btn-lg">Conocer Más <i class="fas fa-arrow-right ms-2"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="sobre-mi">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&q=80&w=1000" alt="Dr. Julio Estrada" class="img-fluid about-img">
+                </div>
+                <div class="col-lg-6 ps-lg-5">
+                    <h2 class="color-primary mb-3" style="color: var(--primary-color); font-weight:700;">Dr. Julio Estrada</h2>
+                    <h4 class="text-muted mb-4">Comprometido con tu salud y bienestar</h4>
+                    <p class="mb-4">Soy médico especialista en Cirugía General y Laparoscópica avanzada. Cuento con una sólida trayectoria en el tratamiento quirúrgico de patologías digestivas y de pared abdominal a través de técnicas de mínima invasión, lo que permite un menor dolor postoperatorio y un retorno más rápido a tus actividades cotidianas.</p>
+                    
+                    <div class="feature-box">
+                        <div class="feature-icon"><i class="fas fa-user-md"></i></div>
+                        <div>
+                            <h5 class="mb-1" style="font-weight:600;">Especialista Certificado</h5>
+                            <p class="mb-0 text-muted">Acreditado por los máximos consejos e instituciones médicas.</p>
+                        </div>
+                    </div>
+                    <div class="feature-box">
+                        <div class="feature-icon"><i class="fas fa-microscope"></i></div>
+                        <div>
+                            <h5 class="mb-1" style="font-weight:600;">Laparoscopía Avanzada</h5>
+                            <p class="mb-0 text-muted">Tecnología de punta y mínima invasión para tu máxima seguridad.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES SECTION -->
+    <section id="servicios" class="bg-light-section">
+        <div class="container">
+            <h2 class="section-title">Procedimientos y Servicios</h2>
+            <div class="row g-4">
+                <!-- Servicio 1 -->
+                <div class="col-md-4">
+                    <div class="service-card">
+                        <i class="fas fa-bacterium"></i>
+                        <h4>Cirugía de Vesícula</h4>
+                        <p class="text-muted mb-0">Colecistectomía laparoscópica para el tratamiento definitivo de piedras o inflamación en la vesícula biliar.</p>
+                    </div>
+                </div>
+                <!-- Servicio 2 -->
+                <div class="col-md-4">
+                    <div class="service-card">
+                        <i class="fas fa-shield-halved"></i>
+                        <h4>Hernias de Pared Abdominal</h4>
+                        <p class="text-muted mb-0">Reparación avanzada de hernias inguinales, umbilicales y de hiato, priorizando técnicas laparoscópicas con malla.</p>
+                    </div>
+                </div>
+                <!-- Servicio 3 -->
+                <div class="col-md-4">
+                    <div class="service-card">
+                        <i class="fas fa-stomach"></i>
+                        <h4>Cirugía Bariátrica</h4>
+                        <p class="text-muted mb-0">Procedimientos orientados al manejo metabólico y la pérdida de peso mediante un enfoque seguro e integral.</p>
+                    </div>
+                </div>
+                <!-- Servicio 4 -->
+                <div class="col-md-4">
+                    <div class="service-card">
+                        <i class="fas fa-appendicitis"></i>
+                        <h4>Apendicectomía</h4>
+                        <p class="text-muted mb-0">Intervención de urgencia mediante mínima invasión para tratar cuadros agudos de apendicitis.</p>
+                    </div>
+                </div>
+                <!-- Servicio 5 -->
+                <div class="col-md-4">
+                    <div class="service-card">
+                        <i class="fas fa-user-nurse"></i>
+                        <h4>Cirugía Gastrointestinal</h4>
+                        <p class="text-muted mb-0">Tratamiento de patologías complejas del colon, estómago, reflujo gastroesofágico e intestino delgado.</p>
+                    </div>
+                </div>
+                <!-- Servicio 6 -->
+                <div class="col-md-4">
+                    <div class="service-card">
+                        <i class="fas fa-heart-pulse"></i>
+                        <h4>Cirugía Menor y Biopsias</h4>
+                        <p class="text-muted mb-0">Remoción de lesiones cutáneas, lipomas, quistes y toma de muestras histológicas en consultorio o quirófano.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS SECTION (OWL CAROUSEL) -->
+    <section id="testimonios">
+        <div class="container">
+            <h2 class="section-title">Lo que dicen los Pacientes</h2>
+            <div class="owl-carousel owl-theme testimonial-carousel">
+                <!-- Testimonio 1 -->
+                <div class="item">
+                    <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=200" alt="Paciente" class="testimonial-img">
+                    <p class="fst-italic">"Excelente atención del Dr. Estrada. Me operó de la vesícula por laparoscopía y la recuperación fue increíblemente rápida. Prácticamente no sentí dolor."</p>
+                    <h5 class="mb-0 mt-3" style="color: var(--primary-color); font-weight: 600;">María Delgado</h5>
+                    <small class="text-muted">Cirugía de Vesícula</small>
+                </div>
+                <!-- Testimonio 2 -->
+                <div class="item">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=200" alt="Paciente" class="testimonial-img">
+                    <p class="fst-italic">"Un profesional intachable con una calidez humana tremenda. Explicó detalladamente todo el proceso de mi cirugía de hernia inguinal. Súper recomendado."</p>
+                    <h5 class="mb-0 mt-3" style="color: var(--primary-color); font-weight: 600;">Carlos Mendoza</h5>
+                    <small class="text-muted">Reparación de Hernia</small>
+                </div>
+                <!-- Testimonio 3 -->
+                <div class="item">
+                    <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=200" alt="Paciente" class="testimonial-img">
+                    <p class="fst-italic">"La atención integral y el seguimiento postoperatorio fueron excelentes. El doctor estuvo siempre disponible para resolver mis dudas. Muchas gracias."</p>
+                    <h5 class="mb-0 mt-3" style="color: var(--primary-color); font-weight: 600;">Ana Sofía Restrepo</h5>
+                    <small class="text-muted">Cirugía de Reflujo</small>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contacto" class="bg-light-section">
+        <div class="container">
+            <h2 class="section-title">Agendar una Consulta</h2>
+            <div class="row g-4">
+                <div class="col-lg-5">
+                    <div class="contact-info-box">
+                        <h4 class="mb-4" style="font-weight: 600;">Información de Contacto</h4>
+                        <p class="mb-4">Si deseas programar una valoración médica o resolver dudas sobre algún procedimiento, ponte en contacto con nosotros.</p>
+                        
+                        <div class="contact-info-item">
+                            <i class="fas fa-location-dot"></i>
+                            <div>
+                                <h6 class="mb-1" style="font-weight: 600;">Ubicación</h6>
+                                <p class="mb-0">Consultorio 402, Hospital Médico Especializado, Av. Principal</p>
+                            </div>
+                        </div>
+                        <div class="contact-info-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <h6 class="mb-1" style="font-weight: 600;">Teléfono</h6>
+                                <p class="mb-0">+123 456 7890 / +123 987 6543</p>
+                            </div>
+                        </div>
+                        <div class="contact-info-item">
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <h6 class="mb-1" style="font-weight: 600;">Horario de Atención</h6>
+                                <p class="mb-0">Lunes a Viernes: 9:00 AM - 6:00 PM<br>Sábados: 9:00 AM - 1:00 PM</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-7">
+                    <div class="bg-white p-4 p-md-5 rounded-4 shadow-sm">
+                        <form action="#" method="POST">
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label class="form-label font-weight-600">Nombre Completo</label>
+                                    <input type="text" class="form-control" placeholder="Ej. Juan Pérez" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label">Correo Electrónico</label>
+                                    <input type="email" class="form-control" placeholder="Ej. juan@correo.com" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label">Número de Teléfono</label>
+                                    <input type="tel" class="form-control" placeholder="Ej. +123 456 789" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label">Motivo de Consulta</label>
+                                    <select class="form-select form-control">
+                                        <option>Valoración por Laparoscopía</option>
+                                        <option>Cirugía de Vesícula</option>
+                                        <option>Cirugía de Hernia</option>
+                                        <option>Consulta General</option>
+                                        <option>Otro Motivo</option>
+                                    </select>
+                                </div>
+                                <div class="col-12">
+                                    <label class="form-label">Mensaje o Síntomas</label>
+                                    <textarea class="form-control" rows="4" placeholder="Escribe brevemente el motivo de tu consulta..." required></textarea>
+                                </div>
+                                <div class="col-12 mt-4">
+                                    <button type="submit" class="btn btn-primary-custom w-100">Enviar Solicitud de Cita</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="row g-4 mb-4">
+                <div class="col-md-4">
+                    <h5 class="navbar-brand text-white mb-3">DR. JULIO ESTRADA</h5>
+                    <p class="small">Médico Cirujano especialista en técnicas quirúrgicas de mínima invasión y laparoscopía avanzada.</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Enlaces Rápidos</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#inicio" class="small"><i class="fas fa-chevron-right me-2 opacity-50"></i>Inicio</a></li>
+                        <li><a href="#sobre-mi" class="small"><i class="fas fa-chevron-right me-2 opacity-50"></i>Sobre Mí</a></li>
+                        <li><a href="#servicios" class="small"><i class="fas fa-chevron-right me-2 opacity-50"></i>Servicios</a></li>
+                        <li><a href="#testimonios" class="small"><i class="fas fa-chevron-right me-2 opacity-50"></i>Testimonios</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Síguenos en Redes</h5>
+                    <div class="footer-socials">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr class="border-secondary opacity-25">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <p class="small text-muted mb-0">&copy; 2026 Dr. Julio Estrada. Todos los derechos reservados. Diseñado con Bootstrap 5 y OwlCarousel2.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts: jQuery (Requerido para OwlCarousel), Bootstrap 5 JS Bundle, Owl Carousel JS -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/dist/js/bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            // Inicialización de Owl Carousel para la sección de testimonios
+            $(".testimonial-carousel").owlCarousel({
+                loop: true,
+                margin: 20,
+                nav: false,
+                dots: true,
+                autoplay: true,
+                autoplayTimeout: 5000,
+                autoplayHoverPause: true,
+                responsive: {
+                    0: {
+                        items: 1
+                    },
+                    768: {
+                        items: 2
+                    },
+                    992: {
+                        items: 3
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
