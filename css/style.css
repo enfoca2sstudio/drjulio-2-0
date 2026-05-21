@@ -221,7 +221,7 @@ body {
 .navbar-nav {
   display: flex;
   flex-wrap: wrap;
-  width: 83%;
+  width: 84%;
 }
 
 .dropdown-menu {
@@ -642,16 +642,40 @@ body {
 /*-------------------------------------
     7.  Proceso de atención
 --------------------------------------*/
+#atencion {
+  margin-top: -132px;
+}
+#atencion .container {
+  width: 100% !important;
+  max-width: 100vw !important;
+  margin: auto !important;
+  padding: 0 !important;
+}
+
 .row-proceso-atencion {
   display: flex;
+  justify-content: center;
   align-items: center;
+  width: 100% !important;
+  max-width: 100vw !important;
+  margin: auto !important;
 }
-.col-proceso-atencion {
+.col-proceso-atencion1 {
+  -ms-flex: 0 0 55%;
+  flex: 0 0 55%;
+  max-width: 100%;
+  padding-right: 38px;
+  padding-left: 328px;
+}
+.col-proceso-atencion2 {
   -ms-flex: 0 0 45%;
   flex: 0 0 45%;
   max-width: 100%;
-  padding-left: 159px;
-  border: 1px solid red;
+  height: 571px;
+  border-top-left-radius: 34px;
+  border-bottom-left-radius: 34px;
+  background: url("http://drjulioestrada.com/wp-content/uploads/2026/02/home-nvo-2.jpg")
+    no-repeat -207px center/cover;
 }
 
 .titu-atencion {
@@ -678,6 +702,204 @@ body {
   text-align: right;
   line-height: 18px;
   color: var(--azul-mari);
+}
+
+.row-pasos-atencion {
+  position: relative;
+  width: 75%;
+  margin: auto;
+  margin-top: -141px;
+  border: 1px solid red;
+}
+
+.col-pasos-atencion {
+  display: flex;
+  flex-direction: column;
+  -ms-flex: 0 0 17%;
+  flex: 0 0 17%;
+  max-width: 100%;
+  height: 334px;
+  padding: 0 !important;
+  border-radius: 24px;
+  background: var(--azul-mari-cla);
+  overflow: hidden;
+}
+
+.cont-num-pasos {
+  width: 49%;
+  padding: 15px !important;
+  border-bottom-right-radius: 21px;
+  background: var(--azul-mari);
+}
+
+.num-pasos {
+  margin-bottom: 0 !important;
+  font-size: 35px;
+  font-weight: 600;
+  text-align: center;
+  color: var(--blanco);
+}
+
+.cont-info-pasos {
+  width: 87%;
+  height: 228px;
+  margin: auto !important;
+}
+
+.titu-info-pasos {
+  height: 60px;
+  margin-bottom: 1px !important;
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--azul-mari);
+}
+
+.txt-info-pasos {
+  margin-bottom: 0 !important;
+  font-size: var(--parrafo);
+  font-weight: 400;
+  line-height: 18px;
+  color: var(--blanco);
+}
+
+/*-------------------------------------
+    8.  Agendar
+--------------------------------------*/
+#contacto {
+  margin-top: -50px;
+  background: var(--azul-mari);
+}
+
+.col-agendar {
+  -ms-flex: 0 0 50%;
+  flex: 0 0 50%;
+  max-width: 100%;
+}
+
+.cont-horario-agendar {
+  margin-bottom: 10px;
+  padding: 27px 0;
+  border-radius: 15px;
+  background: var(--azul-mari-cla);
+}
+.col-horario-agenda {
+  -ms-flex: 0 0 39%;
+  flex: 0 0 39%;
+  max-width: 100%;
+}
+.col-horario-agenda2 {
+  padding-left: 20% !important;
+}
+.txt-dias-agenda,
+.txt-horas-agenda {
+  margin-bottom: 0 !important;
+  font-size: 17px;
+  font-weight: 500;
+  text-align: left;
+  line-height: 28px;
+  color: var(--blanco);
+}
+
+.cont-horario-img {
+  height: 679px;
+  border-radius: 15px;
+  background: url("http://drjulioestrada.com/wp-content/uploads/2026/02/img-home-4.webp")
+    no-repeat center center/cover;
+}
+
+.titu-agendar {
+  margin-bottom: 0 !important;
+  font-size: 17px;
+  font-weight: 700;
+  text-align: left;
+  line-height: 28px;
+  color: var(--blanco);
+}
+
+.titus-agendar {
+  margin-bottom: 0 !important;
+  font-size: 32px;
+  font-weight: 500;
+  text-align: left;
+  line-height: 36px;
+  color: var(--blanco);
+}
+
+/*=====================================
+  Footer
+=======================================*/
+footer {
+  padding: 40px 0 20px;
+  background-color: var(--azul-mari);
+}
+
+.col-footer:nth-child(1) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  -ms-flex: 0 0 32%;
+  flex: 0 0 32%;
+  max-width: 100%;
+}
+.col-footer:nth-child(2),
+.col-footer:nth-child(3),
+.col-footer:nth-child(4) {
+  -ms-flex: 0 0 21%;
+  flex: 0 0 21%;
+  max-width: 100%;
+}
+
+.logo-footer {
+  display: block;
+  width: 289px;
+  height: auto;
+}
+.logo-footer img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  margin: auto;
+}
+
+footer h5 {
+  margin-bottom: 7px;
+  font-size: 23px;
+  font-weight: 600;
+  color: var(--blanco);
+}
+.list-footer li {
+  margin: -1px 0 !important;
+}
+footer a {
+  font-size: 15px;
+  font-weight: 400;
+  text-decoration: none;
+  color: var(--blanco);
+}
+footer a:hover {
+  color: var(--blanco);
+}
+
+.border-footer {
+  border-color: var(--blanco);
+}
+
+.col-foot-bot {
+  -ms-flex: 0 0 40%;
+  flex: 0 0 40%;
+  max-width: 100%;
+  border: 1px solid red;
+}
+
+.txt-foot,
+.txt-foot a {
+  margin-bottom: 0 !important;
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--blanco) !important;
+}
+.txt-foot2 {
+  text-align: right;
 }
 
 /* Section Global Styling */
@@ -797,39 +1019,4 @@ section {
 .form-control:focus {
   box-shadow: 0 0 0 0.25rem rgba(25, 149, 173, 0.25);
   border-color: var(--secondary-color);
-}
-
-/* Footer */
-footer {
-  background-color: #1a252f;
-  color: #bdc3c7;
-  padding: 40px 0 20px;
-  font-size: 0.95rem;
-}
-footer h5 {
-  color: white;
-  font-weight: 600;
-  margin-bottom: 20px;
-}
-footer a {
-  color: #bdc3c7;
-  text-decoration: none;
-  transition: color 0.3s;
-}
-footer a:hover {
-  color: white;
-}
-.footer-socials a {
-  font-size: 1.2rem;
-  margin-right: 15px;
-  background: rgba(255, 255, 255, 0.05);
-  width: 40px;
-  height: 40px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-}
-.footer-socials a:hover {
-  background: var(--secondary-color);
 }
