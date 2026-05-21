@@ -709,7 +709,6 @@ body {
   width: 75%;
   margin: auto;
   margin-top: -141px;
-  border: 1px solid red;
 }
 
 .col-pasos-atencion {
@@ -888,7 +887,6 @@ footer a:hover {
   -ms-flex: 0 0 40%;
   flex: 0 0 40%;
   max-width: 100%;
-  border: 1px solid red;
 }
 
 .txt-foot,
