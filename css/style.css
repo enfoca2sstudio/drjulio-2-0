@@ -12,12 +12,15 @@ A.  Home
   6.  Valores home
   7.  Proceso de atención
   8.  Agendar
-B.  Cursos
-  xx. Cursos Hero
-  xx. Contenido cursos
-C.  Certificaciones
-  xx. Certificaciones Hero
-  xx. Contenido certificaciones
+B.  Somos
+  9.  Somos Hero
+  10. Info profesional
+  11. Valores somos
+  12. CTA agenda
+  13. Mapa
+C.  Procedimientos
+  14. Procedimientos Hero
+  15. Contenido procedimientos
 D.  Ebooks
   xx. Ebooks Hero
   xx. Ebooks Contenido
@@ -183,10 +186,25 @@ Footer
   font-display: swap;
 }
 
+/* adelia */
+@font-face {
+  font-family: "Adelia";
+  src:
+    url("../fonts/adelia/adelia.woff2") format("woff2"),
+    url("../fonts/adelia/adelia.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
 body {
   color: var(--text-dark);
   background-color: #ffffff;
   overflow-x: hidden;
+}
+
+a {
+  text-decoration: none !important;
 }
 
 .acent-aqua {
@@ -194,6 +212,9 @@ body {
 }
 .font-creato {
   font-family: "Creato Display" !important;
+}
+.font-adelia {
+  font-family: "Adelia" !important;
 }
 .txt-acent-ng {
   font-weight: 700 !important;
@@ -284,6 +305,10 @@ body {
 /*-------------------------------------
     3.  Home hero
 --------------------------------------*/
+#inicio {
+  padding-right: 49px !important;
+  padding-left: 105px !important;
+}
 .hero {
   background: url("http://drjulioestrada.com/wp-content/uploads/2026/05/hero-bg.webp")
     no-repeat center center/cover;
@@ -337,7 +362,7 @@ body {
   display: block;
   margin: auto;
   margin-top: 38px;
-  width: 67%;
+  width: 77%;
   height: auto;
 }
 
@@ -347,7 +372,7 @@ body {
 .info-hero {
   position: relative;
   top: -160px;
-  padding: 0 148px !important;
+  padding: 0 112px !important;
 }
 
 .col-info-hero1 {
@@ -453,7 +478,7 @@ body {
 --------------------------------------*/
 #sobre-mi {
   margin-top: -72px;
-  padding: 0 !important;
+  padding: 0 105px !important;
 }
 #sobre-mi .container {
   padding: 0 !important;
@@ -529,6 +554,11 @@ body {
 /*-------------------------------------
     6.  Valores home
 --------------------------------------*/
+#valores {
+  padding-right: 105px;
+  padding-left: 105px;
+}
+
 #valores .container {
   padding: 0 !important;
 }
@@ -556,14 +586,20 @@ body {
   -ms-flex: 0 0 45%;
   flex: 0 0 45%;
   max-width: 100%;
-  margin: 0 10px;
+  margin: 0 6px;
   padding: 0 !important;
 }
 
 .cont-valor1,
 .cont-valor4 {
-  height: 432px;
   border-radius: 31px;
+}
+
+.cont-valor1 {
+  height: 475px;
+}
+.cont-valor4 {
+  height: 432px;
 }
 .cont-valor1 {
   background: url("http://drjulioestrada.com/wp-content/uploads/2026/02/img-1.webp")
@@ -571,7 +607,7 @@ body {
 }
 
 .cont-valor2 {
-  padding: 0 12px;
+  padding: 0 6px;
 }
 .cuadro-valor {
   display: flex;
@@ -605,7 +641,7 @@ body {
 }
 
 .cont-valor3 {
-  height: 134px;
+  height: 97px;
 }
 .cont-valor4 {
   background: url("http://drjulioestrada.com/wp-content/uploads/2026/02/img-home-2.jpg")
@@ -714,8 +750,8 @@ body {
 .col-pasos-atencion {
   display: flex;
   flex-direction: column;
-  -ms-flex: 0 0 17%;
-  flex: 0 0 17%;
+  -ms-flex: 0 0 18%;
+  flex: 0 0 18%;
   max-width: 100%;
   height: 334px;
   padding: 0 !important;
@@ -750,6 +786,7 @@ body {
   margin-bottom: 1px !important;
   font-size: 20px;
   font-weight: 700;
+  line-height: 22px;
   color: var(--azul-mari);
 }
 
@@ -757,7 +794,7 @@ body {
   margin-bottom: 0 !important;
   font-size: var(--parrafo);
   font-weight: 400;
-  line-height: 18px;
+  line-height: 17px;
   color: var(--blanco);
 }
 
@@ -766,6 +803,8 @@ body {
 --------------------------------------*/
 #contacto {
   margin-top: -50px;
+  padding-right: 105px;
+  padding-left: 105px;
   background: var(--azul-mari);
 }
 
@@ -800,7 +839,7 @@ body {
 }
 
 .cont-horario-img {
-  height: 679px;
+  height: 832px;
   border-radius: 15px;
   background: url("http://drjulioestrada.com/wp-content/uploads/2026/02/img-home-4.webp")
     no-repeat center center/cover;
@@ -816,13 +855,429 @@ body {
 }
 
 .titus-agendar {
-  margin-bottom: 0 !important;
+  margin-bottom: 16px !important;
   font-size: 32px;
   font-weight: 500;
   text-align: left;
   line-height: 36px;
   color: var(--blanco);
 }
+
+/* formulario wp */
+.gform_heading {
+  display: none !important;
+}
+
+.gfield_label {
+  font-family: "Creato Display" !important;
+  font-size: var(--parrafo) !important;
+  font-weight: 500 !important;
+  color: var(--blanco) !important;
+}
+
+#gform_submit_button_1 {
+  display: block !important;
+  width: 100% !important;
+  margin: auto !important;
+  font-family: "Creato Display" !important;
+  font-size: var(--parrafo) !important;
+  font-weight: 500 !important;
+  color: var(--azul-mari) !important;
+  border: 2px solid var(--blanco) !important;
+  border-radius: 10px !important;
+  background-color: var(--blanco) !important;
+  transition: 0.3s all ease-in-out !important;
+}
+
+#gform_submit_button_1:hover {
+  color: var(--blanco) !important;
+  border: 2px solid var(--blanco) !important;
+  background-color: transparent !important;
+}
+
+/*=====================================
+  B.  Somos
+=======================================*/
+/*-------------------------------------
+    9.  Somos Hero
+--------------------------------------*/
+#inicio-somos {
+  padding: 0 !important;
+}
+#inicio-somos .container {
+  max-width: 100vw !important;
+  padding: 0 !important;
+}
+.col-somos-carousel {
+  height: 555px;
+  padding: 100px 0;
+}
+.col-somos-carousel1 {
+  background: url("http://drjulioestrada.com/wp-content/uploads/2026/03/somos-hero.webp")
+    no-repeat center center/cover;
+}
+.col-somos-carousel2 {
+  background: url("http://drjulioestrada.com/wp-content/uploads/2026/03/somos-hero-1.webp")
+    no-repeat center center/cover;
+}
+
+.somos-hero-carousel .owl-item {
+  height: 100%;
+}
+
+.col-somos-carousel1 .titu-somos-hero1 {
+  margin-top: 7%;
+}
+.titu-somos-hero {
+  font-size: 19px;
+  font-weight: 500;
+  line-height: 19px;
+  text-align: center;
+  color: var(--azul-mari);
+}
+.titus-somos-hero {
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 34px;
+  text-align: center;
+  color: var(--azul-mari);
+}
+.txt-somos-hero {
+  display: block;
+  width: 42%;
+  margin: auto;
+  font-size: var(--parrafo);
+  font-weight: 500;
+  line-height: 17px;
+  text-align: center;
+  color: var(--azul-mari);
+}
+.txt-somos-hero2 {
+  margin-bottom: 28px;
+}
+
+.list-somos-hero {
+  display: block;
+  width: 42%;
+  margin: auto;
+}
+
+.somos-hero-carousel .owl-dots .owl-dot span {
+  background-color: var(--azul-mari-cla);
+}
+.somos-hero-carousel .owl-dots .owl-dot span.active {
+  background-color: var(--azul-mari);
+}
+
+/*-------------------------------------
+    10. Info profesional
+--------------------------------------*/
+#info-personal {
+  padding: 0 !important;
+}
+.titu-infopro {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 34px;
+  text-align: left;
+  color: var(--azul-mari);
+}
+
+.txt-infopro {
+  margin-bottom: 0 !important;
+  font-size: var(--parrafo);
+  font-weight: 400;
+  line-height: 17px;
+  text-align: left;
+  color: var(--azul-mari);
+}
+
+.row-info-pro {
+  margin: 14px 0 !important;
+}
+
+.col-info-pro {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  -ms-flex: 0 0 50%;
+  flex: 0 0 50%;
+  max-width: 100%;
+  margin: 6px 0 !important;
+}
+.contain-infopro {
+  padding: 0 !important;
+}
+.contain-infopro1 {
+  -ms-flex: 0 0 31%;
+  flex: 0 0 31%;
+  max-width: 100%;
+}
+.contain-infopro2 {
+  -ms-flex: 0 0 72%;
+  flex: 0 0 72%;
+  max-width: 100%;
+}
+
+.img-infopro {
+  display: block;
+  width: 70%;
+  margin: auto;
+}
+
+.contain-infopro p {
+  margin-bottom: 0 !important;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 17px;
+  text-align: left;
+  color: var(--azul-mari);
+}
+
+.firma-infopro {
+  margin-bottom: 0 !important;
+  padding-left: 11px;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 17px;
+  text-align: left;
+  color: var(--azul-mari);
+  border-left: 3px solid var(--azul-mari);
+}
+
+.col-infopro {
+  margin: 0 11px;
+}
+.col-infopro1 {
+  -ms-flex: 0 0 50%;
+  flex: 0 0 50%;
+  max-width: 100%;
+}
+.col-infopro2 {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  -ms-flex: 0 0 45%;
+  flex: 0 0 45%;
+  max-width: 100%;
+  height: 547px;
+  padding-bottom: 24px;
+  border-radius: 15px;
+  background: url("http://drjulioestrada.com/wp-content/uploads/2026/02/img-home-3-nvo.webp")
+    no-repeat -98px -15px/844px;
+}
+
+.contain-infopross {
+  width: 44%;
+  padding: 15px 21px;
+  border-radius: 15px;
+  background-color: var(--azul-mari-cla);
+}
+
+.titus-infopross {
+  margin-bottom: 12px !important;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 22px;
+  text-align: center;
+  letter-spacing: 1.5px;
+  color: var(--blanco);
+}
+
+.titu-infopross {
+  margin-bottom: 0 !important;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 17px;
+  text-align: center;
+  color: var(--blanco);
+}
+
+/*-------------------------------------
+    11. Valores somos
+--------------------------------------*/
+#valor-somos {
+  padding: 0 !important;
+}
+#valor-somos .container {
+  padding: 0 !important;
+  border-radius: 40px;
+  background: url("http://drjulioestrada.com/wp-content/uploads/2026/02/valor-bg.webp")
+    no-repeat center center/cover;
+  overflow: hidden;
+}
+.contain-valor-somo {
+  padding: 35px 48px;
+  background: #3c80c2;
+  background: -webkit-linear-gradient(
+    90deg,
+    rgba(60, 128, 194, 1) 0%,
+    rgba(60, 128, 194, 0.4) 100%
+  );
+  background: -moz-linear-gradient(
+    90deg,
+    rgba(60, 128, 194, 1) 0%,
+    rgba(60, 128, 194, 0.4) 100%
+  );
+  background: linear-gradient(
+    90deg,
+    rgba(60, 128, 194, 1) 0%,
+    rgba(60, 128, 194, 0.4) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#3C80C2", endColorstr="#3C80C266", GradientType=1);
+}
+.head-valo-somo {
+  width: 50%;
+}
+
+.titus-valo-somo {
+  margin-bottom: 8px !important;
+  font-size: 26px;
+  font-weight: 600;
+  color: var(--blanco);
+}
+
+.txt-valo-somo {
+  margin-bottom: 0 !important;
+  font-size: var(--parrafo);
+  font-weight: 400;
+  line-height: 17px;
+  color: var(--blanco);
+}
+
+.row-valo-somo {
+  display: flex;
+  justify-content: center;
+  margin-top: 37px;
+}
+
+.col-valo-somo {
+  display: flex;
+  align-items: center;
+  -ms-flex: 0 0 30%;
+  flex: 0 0 30%;
+  max-width: 100%;
+  margin: 0 15px !important;
+}
+.col-valo-somo:nth-child(1),
+.col-valo-somo:nth-child(2),
+.col-valo-somo:nth-child(3) {
+  margin-bottom: 29px !important;
+}
+
+.col-cont-valo {
+  -ms-flex: 0 0 50%;
+  flex: 0 0 50%;
+  max-width: 100%;
+}
+.col-cont-valo1 {
+  -ms-flex: 0 0 28%;
+  flex: 0 0 28%;
+  max-width: 100%;
+}
+.col-cont-valo2 {
+  -ms-flex: 0 0 72%;
+  flex: 0 0 72%;
+  max-width: 100%;
+}
+
+.img-cont-valo {
+  display: block;
+  width: 67%;
+  margin: auto;
+}
+
+.titu-cont-valo {
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 24px;
+  color: var(--blanco);
+}
+.txt-cont-valo {
+  margin-bottom: 0 !important;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 17px;
+  color: var(--blanco);
+}
+
+/*-------------------------------------
+    12. CTA agenda
+--------------------------------------*/
+#cta-agenda {
+  padding: 0 !important;
+}
+#cta-agenda .container {
+  max-width: 100vw !important;
+  padding: 0 !important;
+  background: url("http://drjulioestrada.com/wp-content/uploads/2026/02/cita-somos-bg.webp")
+    no-repeat center center/cover;
+  background-attachment: fixed;
+  overflow: hidden;
+}
+.contain-cta-valo {
+  padding: 35px 48px;
+  background: #3c80c2;
+  background: -webkit-linear-gradient(
+    90deg,
+    rgba(60, 128, 194, 1) 0%,
+    rgba(60, 128, 194, 0.4) 100%
+  );
+  background: -moz-linear-gradient(
+    90deg,
+    rgba(60, 128, 194, 1) 0%,
+    rgba(60, 128, 194, 0.4) 100%
+  );
+  background: linear-gradient(
+    90deg,
+    rgba(60, 128, 194, 1) 0%,
+    rgba(60, 128, 194, 0.4) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#3C80C2", endColorstr="#3C80C266", GradientType=1);
+}
+
+.row-cta-valo {
+  align-items: center;
+}
+
+.col-cta-valo {
+  -ms-flex: 0 0 50%;
+  flex: 0 0 50%;
+  max-width: 100%;
+}
+.col-cta-valo1 {
+  height: 250px;
+}
+
+.titu-cta-valo {
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 24px;
+  color: var(--blanco);
+}
+
+.txt-cta-valo {
+  margin-bottom: 0 !important;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 17px;
+  color: var(--blanco);
+}
+
+/*-------------------------------------
+    13. Mapa
+--------------------------------------*/
+#mapa {
+  padding: 0 !important;
+  margin-bottom: -10px !important;
+}
+
+/*=====================================
+  C.  Procedimientos
+=======================================*/
+/*-------------------------------------
+    14. Procedimientos Hero
+--------------------------------------*/
 
 /*=====================================
   Footer
@@ -862,9 +1317,9 @@ footer {
 
 footer h5 {
   margin-bottom: 7px;
-  font-size: 23px;
-  font-weight: 600;
-  color: var(--blanco);
+  font-size: 23px !important;
+  font-weight: 600 !important;
+  color: var(--blanco) !important;
 }
 .list-footer li {
   margin: -1px 0 !important;
