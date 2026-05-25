@@ -959,7 +959,7 @@ a {
 .list-somos-hero {
   display: block;
   width: 42%;
-  margin: auto;
+  margin: auto !important;
 }
 
 .somos-hero-carousel .owl-dots .owl-dot span {
@@ -974,6 +974,8 @@ a {
 --------------------------------------*/
 #info-personal {
   padding: 0 !important;
+  padding-right: 105px !important;
+  padding-left: 105px !important;
 }
 .titu-infopro {
   font-size: 32px;
@@ -1098,6 +1100,8 @@ a {
 --------------------------------------*/
 #valor-somos {
   padding: 0 !important;
+  padding-right: 105px !important;
+  padding-left: 105px !important;
 }
 #valor-somos .container {
   padding: 0 !important;
@@ -1206,6 +1210,8 @@ a {
 --------------------------------------*/
 #cta-agenda {
   padding: 0 !important;
+  padding-right: 105px !important;
+  padding-left: 105px !important;
 }
 #cta-agenda .container {
   max-width: 100vw !important;
@@ -1278,6 +1284,280 @@ a {
 /*-------------------------------------
     14. Procedimientos Hero
 --------------------------------------*/
+#procedis {
+  padding: 0 !important;
+}
+#procedis .container {
+  max-width: 100vw !important;
+  padding: 0 !important;
+  background: url("http://drjulioestrada.com/wp-content/uploads/2026/05/procedi-hero.webp")
+    no-repeat center center/cover;
+}
+
+.contain-hero-procedis {
+  padding: 0 100px !important;
+  background: rgba(60, 127, 194, 0.62);
+}
+
+.row-hero-procedis {
+  padding: 0 !important;
+}
+
+.col-hero-procedis {
+  padding: 137px 0 !important;
+}
+.col-hero-procedis1 {
+  -ms-flex: 0 0 50%;
+  flex: 0 0 50%;
+  max-width: 100%;
+}
+.col-hero-procedis2 {
+  -ms-flex: 0 0 50%;
+  flex: 0 0 50%;
+  max-width: 100%;
+}
+
+.titu-hero-procedi {
+  margin-bottom: 0 !important;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 22px;
+  text-align: right;
+  text-transform: uppercase;
+  color: var(--blanco);
+}
+.titus-hero-procedi {
+  margin-bottom: 0 !important;
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 34px;
+  text-align: right;
+  color: var(--blanco);
+}
+.txt-hero-procedi {
+  width: 420px;
+  margin-left: auto !important;
+  margin-bottom: 0 !important;
+  font-size: var(--parrafo);
+  font-weight: 400;
+  line-height: 17px;
+  text-align: right;
+  color: var(--blanco);
+}
+
+/*-------------------------------------
+    15. Contenido procedimientos
+--------------------------------------*/
+.item-procedis {
+  width: 100%;
+  margin-bottom: 4px;
+  scroll-margin-top: 115px;
+}
+.btn-procedi {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 10px 0 !important;
+  background: var(--azul-mari);
+  white-space: wrap;
+}
+
+.btn-procedi.show {
+  background: var(--azul-mari-cla);
+}
+
+.item-procedis .dropdown-menu {
+  width: 98%;
+  height: fit-content;
+  margin: 16px !important;
+  border: 1px solid var(--azul-mari) !important;
+  overflow: visible;
+}
+
+.item-procedis .dropdown-menu::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+.item-procedis .dropdown-menu::-webkit-scrollbar-track {
+  background: var(--blanco); /* Color de fondo del track del scrollbar */
+}
+
+.item-procedis .dropdown-menu::-webkit-scrollbar-thumb {
+  background: rgba(229, 39, 128, 0.4); /* Color del thumb del scrollbar */
+  border-radius: 10px;
+  transition: all 0.3s ease-in-out;
+}
+
+.item-procedis .dropdown-menu::-webkit-scrollbar-thumb:hover {
+  background: var(--fucsia);
+}
+
+.item-procedis .dropdown-menu.show {
+  position: relative !important;
+  transform: translate(0, 0) !important;
+}
+
+.item-procedis .dropdown-item {
+  border-bottom: none;
+  white-space: wrap !important;
+}
+
+.item-procedis .dropdown-toggle::after {
+  display: none;
+}
+
+.int-procedi1 {
+  -ms-flex: 0 0 10%;
+  flex: 0 0 10%;
+  max-width: 100%;
+}
+.int-procedi2 {
+  -ms-flex: 0 0 46%;
+  flex: 0 0 46%;
+  max-width: 100%;
+}
+
+.img-procedis {
+  display: block;
+  width: 88px;
+  margin: auto;
+}
+
+.txt-procedis {
+  margin-bottom: 0 !important;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 22px;
+  color: var(--blanco);
+}
+
+.row-int-procedis {
+  display: flex;
+  justify-content: center;
+  width: 93%;
+  margin: auto;
+  border: 1px solid red;
+}
+
+.col-int-procedis {
+  -ms-flex: 0 0 30%;
+  flex: 0 0 30%;
+  max-width: 100%;
+  margin: 4px !important;
+  padding: 0 !important;
+  border: 1px solid blue;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.btn-inter-procedi {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 55px;
+  width: 100%;
+  margin-bottom: 0 !important;
+  padding: 0 28px !important;
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 19px;
+  text-align: center !important;
+  color: var(--blanco);
+  background: var(--azul-mari);
+}
+
+.btn-inter-procedi.dropdown-toggle {
+  white-space: wrap !important;
+}
+.btn-inter-procedi .dropdown-menu.show {
+  position: relative !important;
+  transform: translate(0, 0) !important;
+}
+
+.btn-inter-procedi .dropdown-menu {
+  width: auto !important;
+  height: fit-content !important;
+  margin: 16px !important;
+  border: 1px solid var(--azul-mari) !important;
+  overflow: auto !important;
+}
+
+.contain-drops {
+  position: relative;
+}
+
+.drop-inter {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1000;
+  min-width: 200px;
+  display: block !important;
+  height: 100px;
+  border: 1px solid red;
+  transition:
+    opacity 0.15s linear,
+    transform 0.15s ease,
+    visibility 0.15s;
+  transform-origin: top center;
+  transform: scaleY(0.8) translateY(-10px);
+  opacity: 0;
+  visibility: hidden;
+}
+.drop-inter.show {
+  transform: scaleY(1) translateY(0);
+  opacity: 1;
+  visibility: visible;
+}
+
+.contain-drops .dropdown-menu {
+  display: block; /* o grid/flex, pero con opacidad 0 */
+  opacity: 0;
+  transform: scaleY(0.8) translateY(-10px);
+  transition:
+    opacity 0.15s ease-in-out,
+    transform 0.15s ease-in-out,
+    visibility 0.15s;
+  visibility: hidden;
+}
+.contain-drops .dropdown-menu.show {
+  opacity: 1;
+  transform: scaleY(1) translateY(0);
+  visibility: visible;
+}
+
+.contain-drops .dropdown-menu {
+  border: none !important;
+}
+
+.cont-drop-inter {
+  padding: 15px 0;
+}
+
+.borde-inter {
+  width: 54%;
+  margin: auto;
+  margin-top: 19px;
+  border-bottom: 1px solid var(--azul-mari) !important;
+}
+
+.titu-drop-inter {
+  margin-bottom: 14px !important;
+  font-size: 27px;
+  font-weight: 600;
+  color: var(--azul-mari);
+}
+.txt-drop-inter,
+.item-drop-inter {
+  margin-bottom: 0 !important;
+  font-size: var(--parrafo);
+  font-weight: 400;
+  line-height: 17px;
+  color: var(--azul-mari);
+}
+.list-drop-inter {
+  margin: 13px 0;
+}
 
 /*=====================================
   Footer
