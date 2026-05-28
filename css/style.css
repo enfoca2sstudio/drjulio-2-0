@@ -21,9 +21,8 @@ B.  Somos
 C.  Procedimientos
   14. Procedimientos Hero
   15. Contenido procedimientos
-D.  Ebooks
-  xx. Ebooks Hero
-  xx. Ebooks Contenido
+D.  Guia de estudiantes
+  16. Contenido Guia estudiantes
 E.  Nosotros
   xx. Contenido Nosotros
 F.  Contacto
@@ -1374,6 +1373,11 @@ a {
   overflow: visible;
 }
 
+.info-estudiantes {
+  padding-right: 35px;
+  padding-left: 35px;
+}
+
 .item-procedis .dropdown-menu::-webkit-scrollbar {
   width: 10px;
   height: 10px;
@@ -1452,13 +1456,13 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 55px;
+  height: 69px;
   width: 100%;
   margin-bottom: 0 !important;
   padding: 0 28px !important;
-  font-size: 17px;
+  font-size: 15px;
   font-weight: 500;
-  line-height: 19px;
+  line-height: 17px;
   text-align: center !important;
   color: var(--blanco);
   background: var(--azul-mari-cla);
@@ -1498,7 +1502,6 @@ a {
   min-width: 200px;
   display: block !important;
   height: 100px;
-  border: 1px solid red;
   transition:
     opacity 0.15s linear,
     transform 0.15s ease,
@@ -1561,6 +1564,112 @@ a {
 }
 .list-drop-inter {
   margin: 13px 0;
+}
+
+.cuadro-infor {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  gap: 0px;
+  width: 91%;
+  margin: auto;
+  margin-bottom: 10px;
+}
+
+.col-cuadro-infor {
+  padding: 5px 0;
+}
+
+.col-cuadro-infor p {
+  margin-bottom: 0 !important;
+  font-size: var(--parrafo);
+  font-weight: 400;
+  line-height: 17px;
+  text-align: center;
+}
+
+.col-cuadro-infor:nth-child(1),
+.col-cuadro-infor:nth-child(2) {
+  color: var(--blanco);
+  border: 1px solid var(--blanco);
+  background: var(--azul-mari);
+}
+
+.col-cuadro-infor:nth-child(3),
+.col-cuadro-infor:nth-child(4),
+.col-cuadro-infor:nth-child(5),
+.col-cuadro-infor:nth-child(6),
+.col-cuadro-infor:nth-child(7),
+.col-cuadro-infor:nth-child(8),
+.col-cuadro-infor:nth-child(9),
+.col-cuadro-infor:nth-child(10),
+.col-cuadro-infor:nth-child(11),
+.col-cuadro-infor:nth-child(12) {
+  color: var(--azul-mari);
+  border: 1px solid var(--azul-mari);
+  background: var(--blanco);
+}
+
+.contain-important {
+  width: 58%;
+  margin: auto;
+  padding: 0 !important;
+  border-radius: 20px;
+  background: url("http://drjulioestrada.com/wp-content/uploads/2026/05/procedi-hero.webp")
+    no-repeat center -124px/751px;
+  overflow: hidden;
+}
+
+.cont-important {
+  padding: 31px 17px;
+  border-radius: 1px;
+  background-color: rgba(23, 118, 186, 0.62);
+}
+
+.titu-important {
+  margin-bottom: 0 !important;
+  font-size: 29px;
+  font-weight: 600;
+  line-height: 31px;
+  text-align: center;
+  color: var(--blanco);
+}
+
+/*=====================================
+  D.  Guia de estudiantes
+=======================================*/
+/*-------------------------------------
+    16. Contenido Guia estudiantes
+--------------------------------------*/
+.col-estudiantes {
+  -ms-flex: 0 0 30%;
+  flex: 0 0 30%;
+  max-width: 100%;
+}
+
+.row-estudiantes .int-procedi2 {
+  -ms-flex: 0 0 100%;
+  flex: 0 0 100%;
+  max-width: 100%;
+}
+
+.row-estudiantes .txt-procedis {
+  margin-bottom: 0 !important;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 22px;
+  text-align: center;
+  color: var(--blanco);
+}
+
+.btn-estudiante {
+  padding: 25px !important;
+  border-radius: 10px;
+}
+
+.dropdown-estudiante {
+  padding-left: 36px;
+  padding-right: 36px;
 }
 
 /*=====================================
