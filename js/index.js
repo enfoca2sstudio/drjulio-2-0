@@ -1,6 +1,22 @@
 (function ($) {
   "use strict";
 
+  $(document).ready(function () {
+    $(".hero-img")
+      .css({
+        opacity: 0,
+        position: "relative",
+        left: "400px", // Empieza 100px a la derecha
+      })
+      .animate(
+        {
+          opacity: 1,
+          left: "0", // Termina en su posición original
+        },
+        1000,
+      ); // Duración 1 segundo
+  });
+
   $(".procedi-carousel").owlCarousel({
     loop: true,
     margin: 20,
