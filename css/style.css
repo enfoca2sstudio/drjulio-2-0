@@ -272,6 +272,11 @@ a {
 .dropdown-item {
   border-bottom: 1px solid var(--fucsia);
   white-space: wrap !important;
+  transition: 0.3s ease-in-out all;
+}
+
+.dropdown-item:hover {
+  color: var(--fucsia);
 }
 
 .nav-link {
@@ -304,9 +309,8 @@ a {
 /*-------------------------------------
     3.  Home hero
 --------------------------------------*/
-#inicio {
-  padding-right: 49px !important;
-  padding-left: 105px !important;
+#inicio .container {
+  width: 80vw;
 }
 .hero {
   background: url("http://drjulioestrada.com/wp-content/uploads/2026/05/hero-bg.webp")
@@ -406,7 +410,7 @@ a {
 }
 .contain-experien2 {
   display: flex;
-  padding: 0 !important;
+  padding: 0 20px !important;
   background: url("http://drjulioestrada.com/wp-content/uploads/2026/02/asset-05.png")
     no-repeat center -91px / cover;
   background-size: 663px;
@@ -439,8 +443,8 @@ a {
 }
 
 .col-info-procedi1 {
-  -ms-flex: 0 0 60%;
-  flex: 0 0 60%;
+  -ms-flex: 0 0 55%;
+  flex: 0 0 55%;
   max-width: 100%;
 }
 .col-info-procedi2 {
@@ -477,7 +481,7 @@ a {
 --------------------------------------*/
 #sobre-mi {
   margin-top: -72px;
-  padding: 0 105px !important;
+  padding: 0 121px !important;
 }
 #sobre-mi .container {
   padding: 0 !important;
@@ -598,7 +602,7 @@ a {
   height: 475px;
 }
 .cont-valor4 {
-  height: 432px;
+  height: 81%;
 }
 .cont-valor1 {
   background: url("http://drjulioestrada.com/wp-content/uploads/2026/02/img-1.webp")
@@ -613,10 +617,16 @@ a {
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  margin-top: 15px;
-  padding: 33px 0;
+  width: 85%;
+  margin: 15px auto auto;
+  padding: 16px 0;
   border-radius: 19px;
   background: var(--azul-mari-cla);
+  transform: translateY(0);
+  transition: 0.5s ease-in-out all;
+}
+.cuadro-valor:hover {
+  transform: translateY(-4px);
 }
 .list-horaro {
   margin-top: 19px;
@@ -696,21 +706,25 @@ a {
   margin: auto !important;
 }
 .col-proceso-atencion1 {
-  -ms-flex: 0 0 55%;
-  flex: 0 0 55%;
+  -ms-flex: 0 0 48%;
+  flex: 0 0 48%;
   max-width: 100%;
-  padding-right: 38px;
-  padding-left: 328px;
+  padding-right: 75px;
+  padding-left: 324px;
 }
 .col-proceso-atencion2 {
-  -ms-flex: 0 0 45%;
-  flex: 0 0 45%;
+  -ms-flex: 0 0 52%;
+  flex: 0 0 52%;
   max-width: 100%;
   height: 571px;
   border-top-left-radius: 34px;
   border-bottom-left-radius: 34px;
   background: url("http://drjulioestrada.com/wp-content/uploads/2026/02/home-nvo-2.jpg")
-    no-repeat -207px center/cover;
+    no-repeat -542px center/1252px;
+}
+
+.contain-atencion {
+  margin-top: -74px;
 }
 
 .titu-atencion {
@@ -727,6 +741,7 @@ a {
   font-size: 37px;
   font-weight: 700;
   text-align: right;
+  line-height: 39px;
   color: var(--azul-mari);
 }
 
@@ -741,9 +756,10 @@ a {
 
 .row-pasos-atencion {
   position: relative;
-  width: 75%;
+  width: 79%;
   margin: auto;
   margin-top: -141px;
+  margin-bottom: -16px;
 }
 
 .col-pasos-atencion {
@@ -757,6 +773,11 @@ a {
   border-radius: 24px;
   background: var(--azul-mari-cla);
   overflow: hidden;
+  transform: translateY(0);
+  transition: 0.5s ease-in-out all;
+}
+.col-pasos-atencion:hover {
+  transform: translateY(-3px);
 }
 
 .cont-num-pasos {
@@ -1010,19 +1031,19 @@ a {
   padding: 0 !important;
 }
 .contain-infopro1 {
-  -ms-flex: 0 0 31%;
-  flex: 0 0 31%;
+  -ms-flex: 0 0 24%;
+  flex: 0 0 24%;
   max-width: 100%;
 }
 .contain-infopro2 {
-  -ms-flex: 0 0 72%;
-  flex: 0 0 72%;
+  -ms-flex: 0 0 79%;
+  flex: 0 0 79%;
   max-width: 100%;
 }
 
 .img-infopro {
   display: block;
-  width: 70%;
+  width: 57%;
   margin: auto;
 }
 
@@ -1191,12 +1212,15 @@ a {
 }
 
 .titu-cont-valo {
+  height: 29px;
+  margin-bottom: 0 !important;
   font-size: 22px;
   font-weight: 700;
   line-height: 24px;
   color: var(--blanco);
 }
 .txt-cont-valo {
+  height: 73px;
   margin-bottom: 0 !important;
   font-size: 13px;
   font-weight: 400;
@@ -1347,8 +1371,8 @@ a {
 --------------------------------------*/
 #info-procedis {
   padding: 0 !important;
-  padding-right: 105px !important;
-  padding-left: 105px !important;
+  padding-right: 110px !important;
+  padding-left: 110px !important;
 }
 .item-procedis {
   width: 100%;
@@ -1618,7 +1642,7 @@ a {
 
 .contain-important {
   width: 58%;
-  margin: auto;
+  margin: 32px auto -27px;
   padding: 0 !important;
   border-radius: 20px;
   background: url("http://drjulioestrada.com/wp-content/uploads/2026/05/procedi-hero.webp")
@@ -1776,26 +1800,30 @@ a {
   font-weight: 400;
 }
 
-.cont-formulario #input_1_1_3,
-.cont-formulario #input_1_1_6,
-.cont-formulario #input_1_3,
-.cont-formulario #input_1_9,
-.cont-formulario #input_1_4,
-.cont-formulario #input_1_6,
-.cont-formulario #input_1_8_1,
-.cont-formulario #input_1_8_2,
-.cont-formulario #input_1_8_3,
-.cont-formulario #input_1_7,
-.cont-formulario #input_1_5 {
+.cont-form-agenda #input_1_1_3,
+.cont-form-agenda #input_1_1_6,
+.cont-form-agenda #input_1_3,
+.cont-form-agenda #input_1_9,
+.cont-form-agenda #input_1_4,
+.cont-form-agenda #input_1_6,
+.cont-form-agenda #input_1_8_1,
+.cont-form-agenda #input_1_8_2,
+.cont-form-agenda #input_1_8_3,
+.cont-form-agenda #input_1_7,
+.cont-form-agenda #input_1_5 {
   margin-top: -25px !important;
   border: 3px solid var(--azul-mari) !important;
 }
 
-.cont-formulario #gform_submit_button_1,
-.cont-formulario #gform_submit_button_1:hover {
+.cont-form-agenda #gform_submit_button_1,
+.cont-form-agenda #gform_submit_button_1:hover {
   color: var(--azul-mari) !important;
   border: 3px solid var(--azul-mari) !important;
   background-color: var(--azul-mari) !important;
+}
+
+.cont-form-agenda .gfield_label.gform-field-label {
+  margin-top: -1px;
 }
 
 /*=====================================

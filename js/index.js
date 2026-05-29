@@ -19,7 +19,7 @@
 
   $(".procedi-carousel").owlCarousel({
     loop: true,
-    margin: 20,
+    margin: 10,
     nav: false,
     dots: true,
     autoplay: true,
