@@ -25,8 +25,8 @@ D.  Guia de estudiantes
   16. Contenido Guia estudiantes
 E.  Agendar
   17. Contenido Agendar
-F.  Contacto
-  xx. Contenido contacto
+F.  Bot de preguntas
+  18. Contenido del bot
 Footer
 ===========================================*/
 
@@ -218,6 +218,9 @@ a {
 .txt-acent-ng {
   font-weight: 700 !important;
 }
+.font-acent-ub {
+  font-weight: 800 !important;
+}
 
 /*=====================================
   2.  Header
@@ -270,6 +273,11 @@ a {
 }
 
 .dropdown-item {
+  padding: 6px 9px 6px 19px !important ;
+  font-family: "Creato Display";
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 15px;
   border-bottom: 1px solid var(--fucsia);
   white-space: wrap !important;
   transition: 0.3s ease-in-out all;
@@ -674,6 +682,7 @@ a {
 
 .list-valores {
   list-style: none;
+  padding-left: 0;
 }
 
 .item-valores {
@@ -763,6 +772,7 @@ a {
 }
 
 .col-pasos-atencion {
+  opacity: 0;
   display: flex;
   flex-direction: column;
   -ms-flex: 0 0 18%;
@@ -773,11 +783,34 @@ a {
   border-radius: 24px;
   background: var(--azul-mari-cla);
   overflow: hidden;
+  transform: translateY(40px);
+  transition:
+    opacity 0.6s ease,
+    transform 0.6s ease;
+}
+.col-pasos-atencion.visible {
+  opacity: 1;
   transform: translateY(0);
-  transition: 0.5s ease-in-out all;
 }
 .col-pasos-atencion:hover {
   transform: translateY(-3px);
+}
+
+/* Staggered delay per card */
+.col-pasos-atencion1 {
+  transition-delay: 0s;
+}
+.col-pasos-atencion2 {
+  transition-delay: 0.15s;
+}
+.col-pasos-atencion3 {
+  transition-delay: 0.3s;
+}
+.col-pasos-atencion4 {
+  transition-delay: 0.45s;
+}
+.col-pasos-atencion5 {
+  transition-delay: 0.6s;
 }
 
 .cont-num-pasos {
@@ -1665,6 +1698,23 @@ a {
   color: var(--blanco);
 }
 
+.col-material-extra {
+  -ms-flex: 0 0 30%;
+  flex: 0 0 30%;
+  max-width: 30%;
+  margin: 0 7px !important;
+  padding: 0 !important;
+  border-radius: 22px;
+  overflow: hidden;
+}
+
+.vid-propie {
+  display: block;
+  margin: auto;
+  width: 308px !important;
+  height: 547px !important;
+}
+
 /*=====================================
   D.  Guia de estudiantes
 =======================================*/
@@ -1800,30 +1850,179 @@ a {
   font-weight: 400;
 }
 
+/* .cont-form-agenda #field_1_1, */
+.cont-form-agenda #field_1_3,
+.cont-form-agenda #field_1_9,
+.cont-form-agenda #field_1_4,
+.cont-form-agenda #field_1_6,
+.cont-form-agenda #field_1_8,
+.cont-form-agenda #field_1_7,
+.cont-form-agenda #field_1_5 {
+  margin-top: -25px !important;
+}
+
 .cont-form-agenda #input_1_1_3,
 .cont-form-agenda #input_1_1_6,
 .cont-form-agenda #input_1_3,
 .cont-form-agenda #input_1_9,
 .cont-form-agenda #input_1_4,
 .cont-form-agenda #input_1_6,
-.cont-form-agenda #input_1_8_1,
-.cont-form-agenda #input_1_8_2,
-.cont-form-agenda #input_1_8_3,
 .cont-form-agenda #input_1_7,
 .cont-form-agenda #input_1_5 {
-  margin-top: -25px !important;
+  border: 3px solid var(--azul-mari) !important;
+}
+.cont-form-agenda #input_1_8_1,
+.cont-form-agenda #input_1_8_2,
+.cont-form-agenda #input_1_8_3 {
   border: 3px solid var(--azul-mari) !important;
 }
 
 .cont-form-agenda #gform_submit_button_1,
 .cont-form-agenda #gform_submit_button_1:hover {
-  color: var(--azul-mari) !important;
+  color: var(--blanco) !important;
   border: 3px solid var(--azul-mari) !important;
   background-color: var(--azul-mari) !important;
 }
+.cont-form-agenda #gform_submit_button_1:hover {
+  color: var(--azul-mari) !important;
+}
 
 .cont-form-agenda .gfield_label.gform-field-label {
-  margin-top: -1px;
+  font-family: "Creato Display" !important;
+  font-weight: 700 !important;
+  color: var(--azul-mari) !important;
+}
+
+/*=====================================
+  F.  Bot de preguntas
+=======================================*/
+/*-------------------------------------
+    18. Contenido del bot
+--------------------------------------*/
+.btn-colapse {
+  display: inline-block;
+  position: fixed;
+  bottom: 54px;
+  left: 7px;
+  z-index: 999;
+}
+
+.row-tooltip {
+  display: flex;
+}
+
+.btn-colapso {
+  width: 234px;
+  border: 2px solid var(--blanco);
+  border-radius: 36px !important;
+  background: var(--azul-mari-cla);
+  transition: ease-in-out 0.5s;
+}
+.btn-colapso:hover,
+.btn-colapso:active {
+  border: 2px solid var(--blanco);
+  background: var(--azul-mari-cla);
+}
+
+.col-tooltip {
+  padding: 0 !important;
+}
+.col-tooltip1 {
+  -ms-flex: 0 0 15%;
+  flex: 0 0 15%;
+  max-width: 100%;
+}
+.col-tooltip2 {
+  -ms-flex: 0 0 64%;
+  flex: 0 0 64%;
+  max-width: 100%;
+}
+.col-tooltip i {
+  font-size: 20px;
+}
+.col-tooltip p {
+  margin-bottom: 0 !important;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 17px;
+  color: var(--blanco);
+}
+
+.colaps-faq {
+  width: 432px;
+  height: 316px;
+  padding: 8px;
+  border: 2px solid var(--azul-mari-cla);
+  border-radius: 9px;
+  background: var(--blanco);
+  overflow: scroll;
+}
+
+.colaps-faq::-webkit-scrollbar,
+.colaps-faq::-webkit-scrollbar-track,
+.colaps-faq::-webkit-scrollbar-thumb {
+  display: none;
+}
+
+.colaps-faq::-webkit-scrollbar-thumb:hover {
+  background: var(--fucsia);
+}
+
+.btn_faq {
+  width: 100%;
+  padding: 10px 9px !important;
+  margin: 5px 0 !important;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 17px;
+  text-align: left;
+  color: var(--blanco);
+  text-decoration: none;
+  background: var(--azul-mari);
+  transition: 0.3s ease-in-out all;
+}
+
+.btn_faq:hover,
+.btn_faq:active {
+  color: var(--blanco);
+  background: var(--azul-mari);
+}
+
+.carta-faq {
+  padding: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  border: none !important;
+}
+
+.carta-faq .card-header {
+  padding: 0 !important;
+  border: none !important;
+}
+
+.card-body p {
+  margin-bottom: 0 !important;
+  font-size: 15px;
+  font-weight: 400;
+  text-align: left;
+  line-height: 17px;
+  color: var(--azul-mari);
+}
+
+.colapso-faq {
+  border: 1px solid var(--azul-mari);
+  border-radius: 6px;
+}
+
+.head-faq {
+  display: block;
+  width: 100%;
+  margin: auto;
+}
+.img-faq {
+  display: block;
+  width: 67%;
+  margin: auto;
 }
 
 /*=====================================

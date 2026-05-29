@@ -1,0 +1,89 @@
+/*!
+ * Copyright 2025-2026 Dr. Julio Estrada
+ * Copyright 2025-2026 Enfoca2's Studios
+ */
+/*=========== TABLE OF CONTENTS ===========
+1.  CSS General
+2.  Header
+A.  Home
+  3.  Home hero
+  4.  Info hero
+  5.  Intervenciones
+  6.  Valores home
+  7.  Proceso de atención
+  8.  Agendar
+B.  Somos
+  9.  Somos Hero
+  10. Info profesional
+  11. Valores somos
+  12. CTA agenda
+  13. Mapa
+C.  Procedimientos
+  14. Procedimientos Hero
+  15. Contenido procedimientos
+D.  Guia de estudiantes
+  16. Contenido Guia estudiantes
+E.  Agendar
+  17. Contenido Agendar
+F.  Bot de preguntas
+  18. Contenido del bot
+Footer
+===========================================*/
+@media (max-width: 768px) {
+  /*=====================================
+        1.  CSS General
+    =======================================*/
+
+  /*=====================================
+        A.  Home
+    =======================================*/
+  /*-------------------------------------
+            3.  Home hero
+    --------------------------------------*/
+  .row-btns-hero {
+    width: 296px;
+    border: 1px solid red;
+  }
+
+  .col-btns-hero {
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+    max-width: 100%;
+  }
+
+  .titu-hero {
+    font-size: 20px;
+    line-height: 22px;
+  }
+  .txt-hero {
+    font-size: 13px;
+    line-height: 15px;
+  }
+
+  .img-hero-home {
+    display: none;
+  }
+
+  .btn-hero {
+    padding: 12px 16px;
+    font-size: 12px;
+    line-height: 14px;
+  }
+
+  /*-------------------------------------
+    4.  Info hero
+--------------------------------------*/
+  .info-hero {
+    position: relative;
+    top: -146px;
+    width: 297px;
+    margin: auto;
+    padding: 0 22px !important;
+    border: 1px solid red;
+  }
+  .row-info-hero {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+  }
+}
