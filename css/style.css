@@ -222,6 +222,13 @@ a {
   font-weight: 800 !important;
 }
 
+.d-tlf {
+  display: none;
+}
+.d-desk {
+  display: block;
+}
+
 /*=====================================
   2.  Header
 =======================================*/
@@ -370,6 +377,7 @@ a {
 }
 
 .img-hero-home {
+  opacity: 0;
   display: block;
   margin: auto;
   margin-top: 38px;
@@ -682,7 +690,7 @@ a {
 
 .list-valores {
   list-style: none;
-  padding-left: 0;
+  padding-left: 0 !important;
 }
 
 .item-valores {
@@ -946,6 +954,30 @@ a {
   color: var(--blanco) !important;
   border: 2px solid var(--blanco) !important;
   background-color: transparent !important;
+}
+
+/* página agendar */
+#pag-agendar {
+  padding: 0 !important;
+  padding-right: 105px !important;
+  padding-left: 105px !important;
+}
+.titu-agenda {
+  margin-bottom: 0 !important;
+  font-size: 17px;
+  font-weight: 700;
+  text-align: left;
+  line-height: 28px;
+  color: var(--azul-mari-cla);
+}
+
+.titus-agenda {
+  margin-bottom: 16px !important;
+  font-size: 32px;
+  font-weight: 500;
+  text-align: left;
+  line-height: 36px;
+  color: var(--azul-mari);
 }
 
 /*=====================================
@@ -1692,7 +1724,7 @@ a {
 .titu-important {
   margin-bottom: 0 !important;
   font-size: 29px;
-  font-weight: 600;
+  font-weight: 500;
   line-height: 31px;
   text-align: center;
   color: var(--blanco);
@@ -1904,7 +1936,7 @@ a {
   position: fixed;
   bottom: 54px;
   left: 7px;
-  z-index: 999;
+  z-index: 9999;
 }
 
 .row-tooltip {
@@ -2059,6 +2091,10 @@ footer {
   width: 100%;
   height: 100%;
   margin: auto;
+}
+
+.list-footer {
+  padding-left: 0 !important;
 }
 
 footer h5 {
