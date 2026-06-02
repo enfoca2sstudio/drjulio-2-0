@@ -68,7 +68,7 @@ Footer
     margin: auto;
   }
   .dropdown-menu {
-    height: auto;
+    height: 222px;
   }
 
   /*=====================================
@@ -77,6 +77,9 @@ Footer
   /*-------------------------------------
             3.  Home hero
   --------------------------------------*/
+  .hero {
+    padding: 33px 0 120px;
+  }
   .row-btns-hero {
     width: 296px;
   }
@@ -203,6 +206,13 @@ Footer
     line-height: 13px;
   }
 
+  .contain-experien2 {
+    background:
+      linear-gradient(rgba(60, 127, 194, 0.6), rgba(60, 127, 194, 0.6)),
+      url("http://drjulioestrada.com/wp-content/uploads/2026/02/asset-05.png")
+        no-repeat center -91px / cover;
+  }
+
   /*-------------------------------------
           5.  Intervenciones
   --------------------------------------*/
@@ -306,7 +316,7 @@ Footer
           7.  Proceso de atención
   --------------------------------------*/
   #atencion {
-    margin-top: -47px;
+    margin-top: -103px;
   }
   #atencion .container {
     width: 100% !important;
@@ -803,7 +813,7 @@ Footer
 
   .txt-drop-inter,
   .item-drop-inter {
-    margin-bottom: 0 !important;
+    margin-bottom: 9px !important;
     font-size: 13px;
     line-height: 15px;
   }
@@ -824,6 +834,26 @@ Footer
   .titu-important {
     font-size: 25px;
     line-height: 27px;
+  }
+
+  .item-procedis .dropdown-menu {
+    flex-wrap: wrap !important;
+  }
+
+  /*=====================================
+    D.  Guia de estudiantes
+  =======================================*/
+  /*-------------------------------------
+          16. Contenido Guia estudiantes
+  --------------------------------------*/
+  .col-material-extra {
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .vid-propie {
+    width: auto !important;
   }
 
   /*=====================================
@@ -867,7 +897,7 @@ Footer
   }
   .col-footer:nth-child(4) {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
   }
 
   .col-footer:nth-child(4) > * {
